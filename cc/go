@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo Unpacking asterix installer...
+rm -rf build
+mkdir build
+cd build
+unzip -q ../asterix*app*.zip
+cd ..
+docker build -t ceejatec/centos-63-asterix-cc .
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+docker run -d -p 2222:22 -p 19001:19001 -p 19002:19002 -v /home/joe/shared --name=a ceejatec/centos-63-asterix
+docker run -d -p 2223:22 --volumes-from a --name=b ceejatec/centos-63-asterix
+docker run -d -p 2224:22 --volumes-from a --name=c ceejatec/centos-63-asterix
