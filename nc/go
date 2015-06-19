@@ -1,0 +1,5 @@
+#!/bin/sh -xe
+
+docker build -t ceejatec/asterix-nc .
+
+
